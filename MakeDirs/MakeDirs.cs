@@ -23,7 +23,7 @@ namespace MakeDirs
             int num = int.Parse(dirNum.Text);
             for (int i = num; i > 0; i--)
             {
-                Directory.CreateDirectory(i.ToString());
+                Directory.CreateDirectory($"{folderBrowseDialogue.SelectedPath}/{prefixTextBox.Text}{i.ToString()}{suffixTextBox.Text}");
             }
             makeDirBtn.Text = "Done!";
         }
@@ -35,6 +35,24 @@ namespace MakeDirs
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(folderBrowseDialogue.ShowDialog() == DialogResult.OK)
+            {
+                selectedPath.Text = folderBrowseDialogue.SelectedPath;
+            }
         }
     }
 }
