@@ -1,6 +1,6 @@
 ﻿namespace MakeDirs
 {
-    partial class Form1
+    partial class MakeDirs
     {
         /// <summary>
         /// Required designer variable.
@@ -60,7 +60,7 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Input # of Folders You Want to Make:";
             // 
-            // Form1
+            // MakeDirs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -68,8 +68,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dirNum);
             this.Controls.Add(this.makeDirBtn);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "MakeDirs";
+            this.Text = "MakeDirs";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

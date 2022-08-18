@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace MakeDirs
 {
-    public partial class Form1 : Form
+    public partial class MakeDirs : Form
     {
-        public Form1()
+        public MakeDirs()
         {
             InitializeComponent();
         }
@@ -28,6 +28,11 @@ namespace MakeDirs
         }
 
         private void dirNum_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
