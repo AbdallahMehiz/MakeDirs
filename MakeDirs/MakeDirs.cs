@@ -21,12 +21,12 @@ namespace MakeDirs
         private void makeDirBtn_Click(object sender, EventArgs e)
         {
             int num = int.Parse(dirNum.Text);
-            for(int i = num; i > 0; i--)
+            for (int i = num; i > 0; i--)
             {
                 Directory.CreateDirectory(i.ToString());
             }
+            makeDirBtn.Text = "Done!";
         }
-
         private void dirNum_TextChanged(object sender, EventArgs e)
         {
 
