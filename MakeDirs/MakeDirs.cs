@@ -20,8 +20,8 @@ namespace MakeDirs
 
         private void makeDirBtn_Click(object sender, EventArgs e)
         {
-            int num = int.Parse(dirNum.Text);
-            for (int i = num; i > 0; i--)
+            int num = int.Parse(dirNumStart.Text);
+            for (int i = num; i >= int.Parse(dirNumStart.Text) && i<= int.Parse(dirNumFinish.Text); i++)
             {
                 Directory.CreateDirectory($"{folderBrowseDialogue.SelectedPath}/{prefixTextBox.Text}{i.ToString()}{suffixTextBox.Text}");
             }
@@ -53,6 +53,11 @@ namespace MakeDirs
             {
                 selectedPath.Text = folderBrowseDialogue.SelectedPath;
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
